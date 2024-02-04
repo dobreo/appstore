@@ -1,0 +1,89 @@
+{
+  "kind": "singleType",
+  "collectionName": "apps",
+  "info": {
+    "singularName": "app",
+    "pluralName": "apps",
+    "displayName": "APP",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Subname": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "RATINGS": {
+      "type": "string"
+    },
+    "Rating": {
+      "type": "string"
+    },
+    "Age": {
+      "type": "string"
+    },
+    "CATEGORY": {
+      "type": "string"
+    },
+    "DEVELOPER": {
+      "type": "string"
+    },
+    "LANGUAGE": {
+      "type": "string"
+    },
+    "SIZE": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Review": {
+      "displayName": "Review",
+      "type": "component",
+      "repeatable": false,
+      "component": "review.review"
+    },
+    "Privacy": {
+      "type": "blocks"
+    },
+    "Compatability": {
+      "type": "string"
+    },
+    "InAppPurchases": {
+      "type": "boolean"
+    },
+    "Copyright": {
+      "type": "string"
+    }
+  }
+}
