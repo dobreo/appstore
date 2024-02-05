@@ -362,6 +362,46 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiAppApp extends Schema.SingleType {
+  collectionName: 'apps';
+  info: {
+    singularName: 'app';
+    pluralName: 'apps';
+    displayName: 'APP';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Icon: Attribute.Media;
+    Subname: Attribute.String;
+    url: Attribute.String;
+    RATINGS: Attribute.String;
+    Rating: Attribute.String;
+    Age: Attribute.String;
+    CATEGORY: Attribute.String;
+    DEVELOPER: Attribute.String;
+    LANGUAGE: Attribute.String;
+    SIZE: Attribute.String;
+    Images: Attribute.Media;
+    Description: Attribute.String;
+    Review: Attribute.Component<'review.review'>;
+    Privacy: Attribute.Blocks;
+    Compatability: Attribute.String;
+    InAppPurchases: Attribute.Boolean;
+    Copyright: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::app.app', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::app.app', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -791,6 +831,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::app.app': ApiAppApp;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
