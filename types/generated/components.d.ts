@@ -5,11 +5,12 @@ export interface ReviewReview extends Schema.Component {
   info: {
     displayName: 'Review';
     icon: 'feather';
+    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Review: Attribute.String;
-    Rating: Attribute.Integer &
+    title: Attribute.String;
+    review: Attribute.Text;
+    rating: Attribute.Integer &
       Attribute.SetMinMax<
         {
           min: 1;
@@ -18,8 +19,8 @@ export interface ReviewReview extends Schema.Component {
         number
       > &
       Attribute.DefaultTo<5>;
-    Date: Attribute.Date;
-    User: Attribute.String;
+    date: Attribute.Date;
+    user: Attribute.String;
   };
 }
 

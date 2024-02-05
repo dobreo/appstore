@@ -2,26 +2,27 @@
   "collectionName": "components_review_reviews",
   "info": {
     "displayName": "Review",
-    "icon": "feather"
+    "icon": "feather",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Review": {
-      "type": "string"
+    "review": {
+      "type": "text"
     },
-    "Rating": {
+    "rating": {
       "type": "integer",
       "default": 5,
       "max": 5,
       "min": 1
     },
-    "Date": {
+    "date": {
       "type": "date"
     },
-    "User": {
+    "user": {
       "type": "string"
     }
   }

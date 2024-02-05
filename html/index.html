@@ -819,7 +819,7 @@
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                inset: 0px;
+                inset: 0;
                 color: transparent;
               "
               sizes="100vw"
@@ -853,44 +853,34 @@
                   color: transparent;
                 "
                 sizes="100vw"
-                :src="backUrl+appData?.Icon?.data?.attributes?.url || ''"
+                :src="backUrl+appData?.icon?.data?.attributes?.url || ''"
               />
             </div>
             <div class="flex flex-col items-start">
               <h1 class="block text-xl font-semibold leading-tight">
-                {{appData.Name}}
+                {{appData.name}}
               </h1>
               <div class="block text-sm text-neutral-500 mt-2 mb-7">
                 <span
                   class="absolute duration-[1500ms] transition-opacity opacity-0"
                 >
-                  <script>
-                    {
-                      {
-                        appData.DEVELOPER;
-                      }
-                    }
-                  </script>
+                  {{ appData.developer }}
                 </span>
                 <span
                   class="absolute duration-[1500ms] transition-opacity opacity-1"
                 >
-                  <script>
-                    {
-                      {
-                        appData.Subname;
-                      }
-                    }
-                  </script>
+                  {{ appData.subname }}
                 </span>
               </div>
               <div class="flex-grow"></div>
               <div class="flex flex-row items-center mt-2">
-                <button
+                <a
+                  :href="appData.url"
+                  target="_blank"
                   class="bg-blue-500 text-white px-6 py-1 rounded-full font-bold uppercase"
                 >
                   GET
-                </button>
+                </a>
                 <span class="ml-2 text-3xs leading-none text-neutral-500"
                   >In-App<br />Purchases</span
                 >
@@ -902,11 +892,12 @@
           >
             <div class="flex flex-col items-center min-w-18 shrink-0">
               <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
-                >178 ratings</span
+                >{{appData.ratings }} ratings</span
               >
-              <img src="assets/images/rating.svg" class="h-8 my-0.5" /><span
-                class="text-1.9xs text-neutral-400"
-              ></span
+
+              <span class="text-3xl text-neutral-400">{{appData.rating}} </span>
+
+              <span class="text-1.9xs text-neutral-400"></span
               ><img src="assets/images/stars.svg" class="h-3.5" />
             </div>
             <div class="flex items-center px-3">
@@ -916,10 +907,9 @@
               <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
                 >age</span
               >
-              <img src="assets/images/age.svg" class="h-8 my-0.5" /><span
-                class="text-1.9xs text-neutral-400"
-                >Years Old</span
-              >
+              <span class="text-3xl text-neutral-400">{{appData.age}} </span>
+
+              <span class="text-1.9xs text-neutral-400">Years Old</span>
             </div>
             <div class="flex items-center px-3">
               <div class="w-px h-3/5 bg-neutral-300"></div>
@@ -930,7 +920,7 @@
               >
               <img src="assets/images/globe.svg" class="h-8 my-0.5" /><span
                 class="text-1.9xs text-neutral-400"
-                >Education</span
+                >{{appData.category}}</span
               >
             </div>
             <div class="flex items-center px-3">
@@ -942,7 +932,7 @@
               >
               <img src="assets/images/dev.svg" class="h-8 my-0.5" /><span
                 class="text-1.9xs text-neutral-400"
-                >Pathfinder DMCC</span
+                >{{appData.developer}}</span
               >
             </div>
             <div class="flex items-center px-3">
@@ -954,7 +944,7 @@
               >
               <img src="assets/images/lang.svg" class="h-8 my-0.5" /><span
                 class="text-1.9xs text-neutral-400"
-                >English</span
+                >{{appData.language}}</span
               >
             </div>
             <div class="flex items-center px-3">
@@ -963,10 +953,8 @@
             <div class="flex flex-col items-center min-w-18 shrink-0">
               <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
                 >size</span
-              >\ <img src="assets/images/size.svg" class="h-8 my-0.5" /><span
-                class="text-1.9xs text-neutral-400"
-                >MB</span
-              >
+              >\
+              <span class="text-1.9xs text-neutral-400">{{appData.size}}</span>
             </div>
           </div>
         </div>
@@ -975,25 +963,7 @@
             class="w-full flex snap-mandatory snap-x overflow-x-auto scrollbar-hide"
           >
             <div
-              class="h-prv aspect-[207/448] mr-3 ro unded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  inset: 0px;
-                  color: transparent;
-                "
-                src="assets/images/screen_2.png"
-              />
-            </div>
-            <div
+              v-for="image in appData.images.data"
               class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
             >
               <img
@@ -1006,179 +976,10 @@
                   position: absolute;
                   height: 100%;
                   width: 100%;
-                  inset: 0px;
+                  inset: 0;
                   color: transparent;
                 "
-                src="assets/images/screen_2.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  inset: 0px;
-                  color: transparent;
-                "
-                src="assets/images/ft_screen_0.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  inset: 0px;
-                  color: transparent;
-                "
-                src="assets/images/screen_1.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  color: transparent;
-                  background-size: cover;
-                  background-position: 50% 50%;
-                  background-repeat: no-repeat;
-                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEWNgamRgJxZQG8ivbS7x9Dn6u1YQ4uId6afl7ZiTpFHM3d4bZa9usPO1dR6ep+LjbFEQoc8OHtuyMJnxsC9xS46AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhwEAIAjAsAoK7vn/ryakGBNYybRaIGNOHxJwl8A8e/FU7wcP5wDzzckuRgAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
-                "
-                src="assets/images/screen_3.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  color: transparent;
-                  background-size: cover;
-                  background-position: 50% 50%;
-                  background-repeat: no-repeat;
-                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXn19Gw06P+s47e5e/P2t+9vcSzv93r4eD26unu7/Lc4dTRzM7VnWetvb/3n2vqoGfNm5DH1e36/P/+ML/3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwRWV3Pz/sWaIUjLOu9hUI419SCKL5gHeFaiVDxLNAN03mKISAAAAAElFTkSuQmCC\'/%3E%3C/svg%3E');
-                "
-                src="assets/images/screen_7.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  color: transparent;
-                  background-size: cover;
-                  background-position: 50% 50%;
-                  background-repeat: no-repeat;
-                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXd2NfLwMju4tvu5OPr6urWw7rNzs7k4+H49fTi6eeqo6nN3+nTp5Dduazf5+rx0bfLhWPlt5r+//9d27TCAAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwUWp3Pz/sWag9sWd+3GGCloj8JYC8eKIZTCwDxbCAO8zSsHRAAAAAElFTkSuQmCC\'/%3E%3C/svg%3E');
-                "
-                src="assets/images/screen_6.png"
-              />
-            </div>
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  color: transparent;
-                  background-size: cover;
-                  background-position: 50% 50%;
-                  background-repeat: no-repeat;
-                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAP1BMVEX+/v3x9PSJkK/u8e+cnbbN0NjCusHg5eV3fZ88SXh7e425v9lEVZN4gJhTWoz19PXy8fLb2tl3cJDs4MLov6iItGjOAAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhQEAIAzAsCJjw/X/W0kIqo4avdFyHljphqSt8C4QzwRJ6wMTigEJ5XMdFQAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
-                "
-                src="assets/images/screen_5.png"
-              />
-            </div>
-
-            <div
-              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
-            >
-              <img
-                alt="screenshot"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                class="rounded-3xl"
-                style="
-                  position: absolute;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  color: transparent;
-                  background-size: cover;
-                  background-position: 50% 50%;
-                  background-repeat: no-repeat;
-                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEX7/Pzj7e3Hn8iotKvi3+7XuZzQv8Dj2Ou7muXS4eO6wbHYyu7BlcnHlL7Ly9S0icfJpOXj7uvFqZnYx8GVOwM3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nBXBhxEAIAgAsbcg2Nv+u3om7JwdVTXSmxl+2SSlexApAXREvgcWTgD1iKzGlgAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
-                "
-                src="assets/images/screen_6.png"
+                :src="backUrl+image.attributes.url"
               />
             </div>
           </div>
@@ -1192,17 +993,13 @@
         <div class="px-5">
           <div class="border-b">
             <div class="block leading-tight relative">
-              <span class="block mb-0.5"
-                >No matter if you are tired after work or full of energy on
-                weekend</span
-              ><span class="block"
-                >We have activities for different goals, interests and
-                context</span
-              ><span class="absolute bottom-0 right-0 text-blue-500">more</span>
+              <span class="block mb-0.5"> {{appData.description}} </span>
+
+              <span class="absolute bottom-0 right-0 text-blue-500">more</span>
             </div>
             <div class="w-full flex flex-row items-center pt-6 pb-10">
               <div class="leading-tight grow">
-                <span class="block text-blue-500">Pathfinder DMCC</span
+                <span class="block text-blue-500">{{appData.developer}}</span
                 ><span class="block text-gray-500 text-xs">Developer</span>
               </div>
               <svg
@@ -1457,12 +1254,14 @@
                     ></div>
                   </div>
                 </div>
-                <span class="text-neutral-500 text-sm">151 Ratings</span>
+                <span class="text-neutral-500 text-sm"
+                  >{{appData.ratings}} Ratings</span
+                >
               </div>
             </div>
             <div class="flex flex-col bg-[#F2F1F6] rounded-lg px-5 py-4 mb-8">
               <div class="flex flex-row justify-between">
-                <span class="font-semibold">It’s perfect</span
+                <span class="font-semibold">{{}}</span
                 ><span class="text-neutral-500">24 Dec</span>
               </div>
               <div class="flex flex-row justify-between items-center mb-3">
@@ -1710,595 +1509,115 @@
   <script>
     const { createApp, ref } = Vue;
 
-    createApp({
-      setup() {
-        const appData = {
-          Name: "Hearty",
-          Subname: "Fun Ideas for Parents",
-          url: "https://www.facebook.com/",
-          RATINGS: "178",
-          Rating: "4.7",
-          Age: "4+",
-          CATEGORY: "Education",
-          DEVELOPER: "Pathfinder",
-          LANGUAGE: "English",
-          SIZE: "77.6 Mb",
-          Description:
-            "No matter if you are tired after work or full of energy on weekend We have activities for different goals, interests and context",
-          Privacy: [
+    const appData = ref({
+      name: "Hearty",
+      subname: "Fun Ideas for Parents",
+      url: "https://www.facebook.com/",
+      ratings: "178",
+      rating: "4.7",
+      age: "4+",
+      category: "Education",
+      developer: "Pathfinder",
+      language: "English",
+      size: "77.6 Mb",
+      description:
+        "No matter if you are tired after work or full of energy on weekend We have activities for different goals, interests and context",
+      privacy: [
+        {
+          type: "paragraph",
+          children: [
             {
-              type: "paragraph",
-              children: [
-                {
-                  type: "text",
-                  text: "The developer, Pathfinder DMCC, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the developer’s privacy policy.",
-                },
-              ],
-            },
-            {
-              type: "paragraph",
-              children: [
-                {
-                  type: "text",
-                  text: "",
-                },
-              ],
+              type: "text",
+              text: "The developer, Pathfinder DMCC, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the developer’s privacy policy.",
             },
           ],
-          Compatability: "Works on this iPhone",
-          InAppPurchases: true,
-          Copyright: "© 2022, PATHFINDER DMCC",
-          Icon: {
-            data: {
-              id: 1,
-              attributes: {
-                url: "/uploads/logo_round_4865dbb300.png",
-              },
+        },
+        {
+          type: "paragraph",
+          children: [
+            {
+              type: "text",
+              text: "",
+            },
+          ],
+        },
+      ],
+      compatability: "Works on this iPhone",
+      inapppurchases: true,
+      copyright: "© 2022, PATHFINDER DMCC",
+      icon: {
+        data: {
+          id: 1,
+          attributes: {
+            url: "/uploads/logo_round_4865dbb300.png",
+          },
+        },
+      },
+      images: {
+        data: [
+          {
+            id: 2,
+            attributes: {
+              url: "/uploads/screen_1_ae135475bb.png",
             },
           },
-          Images: {
-            data: [
-              {
-                id: 2,
-                attributes: {
-                  name: "screen_1.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 1080,
-                  height: 2337,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_1.png",
-                      hash: "thumbnail_screen_1_ae135475bb",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 12.28,
-                      url: "/uploads/thumbnail_screen_1_ae135475bb.png",
-                    },
-                    medium: {
-                      name: "medium_screen_1.png",
-                      hash: "medium_screen_1_ae135475bb",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 114,
-                      url: "/uploads/medium_screen_1_ae135475bb.png",
-                    },
-                    small: {
-                      name: "small_screen_1.png",
-                      hash: "small_screen_1_ae135475bb",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 66.04,
-                      url: "/uploads/small_screen_1_ae135475bb.png",
-                    },
-                    large: {
-                      name: "large_screen_1.png",
-                      hash: "large_screen_1_ae135475bb",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 168.75,
-                      url: "/uploads/large_screen_1_ae135475bb.png",
-                    },
-                  },
-                  hash: "screen_1_ae135475bb",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 138.52,
-                  url: "/uploads/screen_1_ae135475bb.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.018Z",
-                  updatedAt: "2024-02-04T10:46:34.018Z",
-                },
-              },
-              {
-                id: 3,
-                attributes: {
-                  name: "screen_4.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 1080,
-                  height: 2337,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_4.png",
-                      hash: "thumbnail_screen_4_b7d5731101",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 13.75,
-                      url: "/uploads/thumbnail_screen_4_b7d5731101.png",
-                    },
-                    medium: {
-                      name: "medium_screen_4.png",
-                      hash: "medium_screen_4_b7d5731101",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 127.15,
-                      url: "/uploads/medium_screen_4_b7d5731101.png",
-                    },
-                    small: {
-                      name: "small_screen_4.png",
-                      hash: "small_screen_4_b7d5731101",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 74.68,
-                      url: "/uploads/small_screen_4_b7d5731101.png",
-                    },
-                    large: {
-                      name: "large_screen_4.png",
-                      hash: "large_screen_4_b7d5731101",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 186.19,
-                      url: "/uploads/large_screen_4_b7d5731101.png",
-                    },
-                  },
-                  hash: "screen_4_b7d5731101",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 143,
-                  url: "/uploads/screen_4_b7d5731101.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.193Z",
-                  updatedAt: "2024-02-04T10:46:34.193Z",
-                },
-              },
-              {
-                id: 4,
-                attributes: {
-                  name: "screen_6.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 828,
-                  height: 1792,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_6.png",
-                      hash: "thumbnail_screen_6_c9a5c112b4",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 17.91,
-                      url: "/uploads/thumbnail_screen_6_c9a5c112b4.png",
-                    },
-                    small: {
-                      name: "small_screen_6.png",
-                      hash: "small_screen_6_c9a5c112b4",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 111.87,
-                      url: "/uploads/small_screen_6_c9a5c112b4.png",
-                    },
-                    medium: {
-                      name: "medium_screen_6.png",
-                      hash: "medium_screen_6_c9a5c112b4",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 199.25,
-                      url: "/uploads/medium_screen_6_c9a5c112b4.png",
-                    },
-                    large: {
-                      name: "large_screen_6.png",
-                      hash: "large_screen_6_c9a5c112b4",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 303.56,
-                      url: "/uploads/large_screen_6_c9a5c112b4.png",
-                    },
-                  },
-                  hash: "screen_6_c9a5c112b4",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 195.65,
-                  url: "/uploads/screen_6_c9a5c112b4.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.195Z",
-                  updatedAt: "2024-02-04T10:46:34.195Z",
-                },
-              },
-              {
-                id: 5,
-                attributes: {
-                  name: "screen_3.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 828,
-                  height: 1792,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_3.png",
-                      hash: "thumbnail_screen_3_ce4cf59dbc",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 16.13,
-                      url: "/uploads/thumbnail_screen_3_ce4cf59dbc.png",
-                    },
-                    small: {
-                      name: "small_screen_3.png",
-                      hash: "small_screen_3_ce4cf59dbc",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 112.52,
-                      url: "/uploads/small_screen_3_ce4cf59dbc.png",
-                    },
-                    medium: {
-                      name: "medium_screen_3.png",
-                      hash: "medium_screen_3_ce4cf59dbc",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 226.69,
-                      url: "/uploads/medium_screen_3_ce4cf59dbc.png",
-                    },
-                    large: {
-                      name: "large_screen_3.png",
-                      hash: "large_screen_3_ce4cf59dbc",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 377.12,
-                      url: "/uploads/large_screen_3_ce4cf59dbc.png",
-                    },
-                  },
-                  hash: "screen_3_ce4cf59dbc",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 286.75,
-                  url: "/uploads/screen_3_ce4cf59dbc.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.411Z",
-                  updatedAt: "2024-02-04T10:46:34.411Z",
-                },
-              },
-              {
-                id: 6,
-                attributes: {
-                  name: "screen_2.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 640,
-                  height: 1385,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_2.png",
-                      hash: "thumbnail_screen_2_eebe5bf436",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 19.08,
-                      url: "/uploads/thumbnail_screen_2_eebe5bf436.png",
-                    },
-                    small: {
-                      name: "small_screen_2.png",
-                      hash: "small_screen_2_eebe5bf436",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 142.17,
-                      url: "/uploads/small_screen_2_eebe5bf436.png",
-                    },
-                    medium: {
-                      name: "medium_screen_2.png",
-                      hash: "medium_screen_2_eebe5bf436",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 286.87,
-                      url: "/uploads/medium_screen_2_eebe5bf436.png",
-                    },
-                    large: {
-                      name: "large_screen_2.png",
-                      hash: "large_screen_2_eebe5bf436",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 470.6,
-                      url: "/uploads/large_screen_2_eebe5bf436.png",
-                    },
-                  },
-                  hash: "screen_2_eebe5bf436",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 162.65,
-                  url: "/uploads/screen_2_eebe5bf436.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.434Z",
-                  updatedAt: "2024-02-04T10:46:34.434Z",
-                },
-              },
-              {
-                id: 7,
-                attributes: {
-                  name: "screen_7.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 828,
-                  height: 1792,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_7.png",
-                      hash: "thumbnail_screen_7_ae59c40d24",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 16.84,
-                      url: "/uploads/thumbnail_screen_7_ae59c40d24.png",
-                    },
-                    small: {
-                      name: "small_screen_7.png",
-                      hash: "small_screen_7_ae59c40d24",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 91.97,
-                      url: "/uploads/small_screen_7_ae59c40d24.png",
-                    },
-                    medium: {
-                      name: "medium_screen_7.png",
-                      hash: "medium_screen_7_ae59c40d24",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 158.95,
-                      url: "/uploads/medium_screen_7_ae59c40d24.png",
-                    },
-                    large: {
-                      name: "large_screen_7.png",
-                      hash: "large_screen_7_ae59c40d24",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 239.85,
-                      url: "/uploads/large_screen_7_ae59c40d24.png",
-                    },
-                  },
-                  hash: "screen_7_ae59c40d24",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 122.11,
-                  url: "/uploads/screen_7_ae59c40d24.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.455Z",
-                  updatedAt: "2024-02-04T10:46:34.455Z",
-                },
-              },
-              {
-                id: 8,
-                attributes: {
-                  name: "screen_5.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 1242,
-                  height: 2688,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_screen_5.png",
-                      hash: "thumbnail_screen_5_f981578486",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 17.72,
-                      url: "/uploads/thumbnail_screen_5_f981578486.png",
-                    },
-                    small: {
-                      name: "small_screen_5.png",
-                      hash: "small_screen_5_f981578486",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 99.93,
-                      url: "/uploads/small_screen_5_f981578486.png",
-                    },
-                    medium: {
-                      name: "medium_screen_5.png",
-                      hash: "medium_screen_5_f981578486",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 179.57,
-                      url: "/uploads/medium_screen_5_f981578486.png",
-                    },
-                    large: {
-                      name: "large_screen_5.png",
-                      hash: "large_screen_5_f981578486",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 272.49,
-                      url: "/uploads/large_screen_5_f981578486.png",
-                    },
-                  },
-                  hash: "screen_5_f981578486",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 275.81,
-                  url: "/uploads/screen_5_f981578486.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.609Z",
-                  updatedAt: "2024-02-04T10:46:34.609Z",
-                },
-              },
-              {
-                id: 9,
-                attributes: {
-                  name: "ft_screen_0.png",
-                  alternativeText: null,
-                  caption: null,
-                  width: 640,
-                  height: 1385,
-                  formats: {
-                    thumbnail: {
-                      name: "thumbnail_ft_screen_0.png",
-                      hash: "thumbnail_ft_screen_0_222081cc62",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 72,
-                      height: 156,
-                      size: 18.57,
-                      url: "/uploads/thumbnail_ft_screen_0_222081cc62.png",
-                    },
-                    small: {
-                      name: "small_ft_screen_0.png",
-                      hash: "small_ft_screen_0_222081cc62",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 231,
-                      height: 500,
-                      size: 122.51,
-                      url: "/uploads/small_ft_screen_0_222081cc62.png",
-                    },
-                    medium: {
-                      name: "medium_ft_screen_0.png",
-                      hash: "medium_ft_screen_0_222081cc62",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 347,
-                      height: 750,
-                      size: 238.97,
-                      url: "/uploads/medium_ft_screen_0_222081cc62.png",
-                    },
-                    large: {
-                      name: "large_ft_screen_0.png",
-                      hash: "large_ft_screen_0_222081cc62",
-                      ext: ".png",
-                      mime: "image/png",
-                      path: null,
-                      width: 462,
-                      height: 1000,
-                      size: 385.73,
-                      url: "/uploads/large_ft_screen_0_222081cc62.png",
-                    },
-                  },
-                  hash: "ft_screen_0_222081cc62",
-                  ext: ".png",
-                  mime: "image/png",
-                  size: 161.14,
-                  url: "/uploads/ft_screen_0_222081cc62.png",
-                  previewUrl: null,
-                  provider: "local",
-                  provider_metadata: null,
-                  createdAt: "2024-02-04T10:46:34.653Z",
-                  updatedAt: "2024-02-04T10:46:34.653Z",
-                },
-              },
-            ],
+          {
+            id: 3,
+            attributes: {
+              url: "/uploads/screen_4_b7d5731101.png",
+            },
           },
-          Review: {
-            id: 1,
-            Title: "It’s perfect",
-            Review:
-              "it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….",
-            Rating: 5,
-            Date: "2024-02-14",
-            User: "Winnpooh009",
+          {
+            id: 4,
+            attributes: {
+              url: "/uploads/screen_6_c9a5c112b4.png",
+            },
           },
-        };
+          {
+            id: 5,
+            attributes: {
+              url: "/uploads/screen_3_ce4cf59dbc.png",
+            },
+          },
+          {
+            id: 6,
+            attributes: {
+              url: "/uploads/screen_2_eebe5bf436.png",
+            },
+          },
+          {
+            id: 7,
+            attributes: {
+              url: "/uploads/screen_7_ae59c40d24.png",
+            },
+          },
+          {
+            id: 8,
+            attributes: {
+              url: "/uploads/screen_5_f981578486.png",
+            },
+          },
+          {
+            id: 9,
+            attributes: {
+              url: "/uploads/ft_screen_0_222081cc62.png",
+            },
+          },
+        ],
+      },
+      review: {
+        id: 1,
+        title: "It’s perfect",
+        teview:
+          "it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….",
+        rating: 5,
+        date: "2024-02-14",
+        user: "Winnpooh009",
+      },
+    });
 
+    createApp({
+      setup() {
         return {
           backUrl: "https://appstore-production.up.railway.app",
           appData,
@@ -2310,7 +1629,10 @@
       (data) => {
         data.json().then(({ data }) => {
           const { attributes } = data || {};
-          console.warn("attributes", attributes);
+
+          Object.assign(appData.value, attributes);
+
+          console.warn("aao", appData);
         });
       }
     );

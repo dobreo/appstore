@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Icon": {
+    "icon": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -26,34 +26,34 @@
         "audios"
       ]
     },
-    "Subname": {
+    "subname": {
       "type": "string"
     },
     "url": {
       "type": "string"
     },
-    "RATINGS": {
+    "ratings": {
       "type": "string"
     },
-    "Rating": {
+    "rating": {
       "type": "string"
     },
-    "Age": {
+    "age": {
       "type": "string"
     },
-    "CATEGORY": {
+    "category": {
       "type": "string"
     },
-    "DEVELOPER": {
+    "developer": {
       "type": "string"
     },
-    "LANGUAGE": {
+    "language": {
       "type": "string"
     },
-    "SIZE": {
+    "size": {
       "type": "string"
     },
-    "Images": {
+    "images": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -64,25 +64,25 @@
         "audios"
       ]
     },
-    "Description": {
+    "description": {
       "type": "string"
     },
-    "Review": {
+    "review": {
       "displayName": "Review",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "review.review"
     },
-    "Privacy": {
+    "privacy": {
       "type": "blocks"
     },
-    "Compatability": {
+    "compatability": {
       "type": "string"
     },
-    "InAppPurchases": {
+    "inapppurchases": {
       "type": "boolean"
     },
-    "Copyright": {
+    "copyright": {
       "type": "string"
     }
   }
