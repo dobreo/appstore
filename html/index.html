@@ -1,1084 +1,2318 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Hearty App</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="favicon.png">
-
-
-  <meta charset="utf-8">
-  <meta name="next-head-count" content="7">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-
-  <link rel="preload" href="assets/css/fbb0041d0be8ac19.css" as="style">
-  <link rel="stylesheet" href="assets/css/fbb0041d0be8ac19.css" data-n-g="">
-
-  <script defer="" nomodule="" src="assets/js/polyfills-c67a75d1b6f99dc8.js"></script>
-
-  <script src="assets/js/webpack-527576ff117bb29f.js" defer=""></script>
-  <script src="assets/js/framework-2c79e2a64abdb08b.js" defer=""></script>
-  <script src="assets/js/main-5acc9eeee10a60a0.js" defer=""></script>
-  <script src="assets/js/_app-6fb0133fd1a6dc12.js" defer=""></script>
-  <script src="assets/js/c0d53ec4-2663214c04cec19e.js" defer=""></script>
-  <script src="assets/js/873-f0a097f596a51792.js" defer=""></script>
-  <script src="assets/js/728-a96fb5378ccc6aab.js" defer=""></script>
-  <script src="assets/js/store-0cf7dfa0347d3824.js" defer=""></script>
-  <script src="assets/js/_buildManifest.js" defer=""></script>
-  <script src="assets/js/_ssgManifest.js" defer=""></script>
-
-  <style
-    data-href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;display=swap">@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDIkhRTA.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmRTA.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmRTA.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmRTA.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImRTA.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }</style>
-  <style
-    data-href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&amp;display=swap">@font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G5Clntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVi5ntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: normal;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4Gfy5ntw.woff) format('woff')
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-  }
-
-  @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-  }</style>
-</head>
-
-<body>
-<div id="__next">
-  <div class="bg-white flex flex-col items-center py-6 relative md:w-96">
-    <div class="w-full flex flex-row border-b bg-white py-3 px-4 fixed top-0 z-50 justify-between transition-opacity"
-         style="opacity:0">
-      <div class="relative aspect-square h-8 rounded-lg mr-4">
-        <img alt="App Icon" loading="lazy" decoding="async"
-             data-nimg="fill"
-             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-             sizes="100vw"
-             src="assets/images/logo-round.png"/>
-      </div>
-      <div class="flex flex-row items-center justify-self-end"><span
-        class="mr-2 text-3xs leading-none text-neutral-500">In-App<br>Purchases</span>
-        <button class="bg-blue-500 text-white px-6 py-1 rounded-full font-bold uppercase">GET</button>
-      </div>
-    </div>
-    <div class="w-full pl-5 overflow-visible">
-      <div class="flex w-full mb-5">
-        <div class="relative aspect-square h-28 rounded-lg mr-4">
-          <img alt="App Icon" loading="lazy" decoding="async"
-               data-nimg="fill"
-               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-               sizes="100vw"
-               src="assets/images/logo-round.png">
-        </div>
-        <div class="flex flex-col items-start"><h1 class="block text-xl font-semibold leading-tight">Hearty App:
-          Everyday Bonding</h1>
-          <div class="block text-sm text-neutral-500 mt-2 mb-7"><span
-            class="absolute duration-[1500ms] transition-opacity opacity-0">Pathfinder DMCC</span><span
-            class="absolute duration-[1500ms] transition-opacity opacity-1">Fun Ideas for Parents</span></div>
-          <div class="flex-grow"></div>
-          <div class="flex flex-row items-center mt-2">
-            <button class="bg-blue-500 text-white px-6 py-1 rounded-full font-bold uppercase">GET</button>
-            <span class="ml-2 text-3xs leading-none text-neutral-500">In-App<br>Purchases</span></div>
-        </div>
-      </div>
-      <div class="w-full flex flex-row border-t border-neutral-200 py-2.5 overflow-x-auto scrollbar-hide">
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">178 ratings</span>
-          <img
-            src="assets/images/rating.svg" class="h-8 my-0.5"><span class="text-1.9xs text-neutral-400"></span><img
-            src="assets/images/stars.svg" class="h-3.5"></div>
-        <div class="flex items-center px-3">
-          <div class="w-px h-3/5 bg-neutral-300"></div>
-        </div>
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">age</span>
-          <img src="assets/images/age.svg"
-               class="h-8 my-0.5"><span
-            class="text-1.9xs text-neutral-400">Years Old</span></div>
-        <div class="flex items-center px-3">
-          <div class="w-px h-3/5 bg-neutral-300"></div>
-        </div>
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">category</span>
-          <img src="assets/images/globe.svg"
-               class="h-8 my-0.5"><span
-            class="text-1.9xs text-neutral-400">Education</span></div>
-        <div class="flex items-center px-3">
-          <div class="w-px h-3/5 bg-neutral-300"></div>
-        </div>
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">developer</span>
-          <img src="assets/images/dev.svg"
-               class="h-8 my-0.5"><span
-            class="text-1.9xs text-neutral-400">Pathfinder DMCC</span></div>
-        <div class="flex items-center px-3">
-          <div class="w-px h-3/5 bg-neutral-300"></div>
-        </div>
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">language</span>
-          <img src="assets/images/lang.svg"
-               class="h-8 my-0.5"><span
-            class="text-1.9xs text-neutral-400">English</span></div>
-        <div class="flex items-center px-3">
-          <div class="w-px h-3/5 bg-neutral-300"></div>
-        </div>
-        <div class="flex flex-col items-center min-w-18 shrink-0"><span
-          class="text-1.5xs font-semibold text-neutral-400 uppercase">size</span>\
-          <img src="assets/images/size.svg"
-               class="h-8 my-0.5"><span
-            class="text-1.9xs text-neutral-400">MB</span></div>
-      </div>
-    </div>
-    <div class="w-full my-3.5">
-      <div class="w-full flex snap-mandatory snap-x overflow-x-auto scrollbar-hide">
-        <div class="h-prv aspect-[207/448] mr-3 ro unded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-            src="assets/images/screen_2.png"/>
-        </div>
-        <div class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-            src="assets/images/screen_2.png"/>
-        </div>
-        <div class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-            src="assets/images/ft_screen_0.png"/>
-        </div>
-        <div class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-            src="assets/images/screen_1.png"/>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Hearty App</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <meta charset="utf-8" />
+    <meta name="next-head-count" content="7" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+    <link rel="preload" href="assets/css/fbb0041d0be8ac19.css" as="style" />
+    <link rel="stylesheet" href="assets/css/fbb0041d0be8ac19.css" data-n-g="" />
+
+    <script
+      defer=""
+      nomodule=""
+      src="assets/js/polyfills-c67a75d1b6f99dc8.js"
+    ></script>
+
+    <script src="assets/js/webpack-527576ff117bb29f.js" defer=""></script>
+    <script src="assets/js/framework-2c79e2a64abdb08b.js" defer=""></script>
+    <script src="assets/js/main-5acc9eeee10a60a0.js" defer=""></script>
+    <script src="assets/js/_app-6fb0133fd1a6dc12.js" defer=""></script>
+    <script src="assets/js/c0d53ec4-2663214c04cec19e.js" defer=""></script>
+    <script src="assets/js/873-f0a097f596a51792.js" defer=""></script>
+    <script src="assets/js/728-a96fb5378ccc6aab.js" defer=""></script>
+    <script src="assets/js/store-0cf7dfa0347d3824.js" defer=""></script>
+    <script src="assets/js/_buildManifest.js" defer=""></script>
+    <script src="assets/js/_ssgManifest.js" defer=""></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style
+      data-href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;display=swap"
+    >
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDIkhRTA.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmRTA.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmRTA.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmRTA.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImRTA.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style
+      data-href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&amp;display=swap"
+    >
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G1ilntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4G5Clntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GCC5ntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GMS5ntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4GVi5ntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe1mMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp5F5bxqqtQ1yiU4Gfy5ntw.woff)
+          format("woff");
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t4R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7txR-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t6R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t7R-tQKr51pE8.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 900;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQKr51.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="bg-white flex flex-col items-center py-6 relative md:w-96">
         <div
-          class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 4 8'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEWNgamRgJxZQG8ivbS7x9Dn6u1YQ4uId6afl7ZiTpFHM3d4bZa9usPO1dR6ep+LjbFEQoc8OHtuyMJnxsC9xS46AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhwEAIAjAsAoK7vn/ryakGBNYybRaIGNOHxJwl8A8e/FU7wcP5wDzzckuRgAAAABJRU5ErkJggg=='/%3E%3C/svg%3E&quot;)"
-            src="assets/images/screen_3.png"/>
+          class="w-full flex flex-row border-b bg-white py-3 px-4 fixed top-0 z-50 justify-between transition-opacity"
+          style="opacity: 0"
+        >
+          <div class="relative aspect-square h-8 rounded-lg mr-4">
+            <img
+              alt="App Icon"
+              loading="lazy"
+              decoding="async"
+              data-nimg="fill"
+              style="
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                inset: 0px;
+                color: transparent;
+              "
+              sizes="100vw"
+              src="assets/images/logo-round.png"
+            />
+          </div>
+          <div class="flex flex-row items-center justify-self-end">
+            <span class="mr-2 text-3xs leading-none text-neutral-500"
+              >In-App<br />Purchases</span
+            >
+            <button
+              class="bg-blue-500 text-white px-6 py-1 rounded-full font-bold uppercase"
+            >
+              GET
+            </button>
+          </div>
         </div>
-        <div
-          class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 4 8'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXn19Gw06P+s47e5e/P2t+9vcSzv93r4eD26unu7/Lc4dTRzM7VnWetvb/3n2vqoGfNm5DH1e36/P/+ML/3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwRWV3Pz/sWaIUjLOu9hUI419SCKL5gHeFaiVDxLNAN03mKISAAAAAElFTkSuQmCC'/%3E%3C/svg%3E&quot;)"
-            src="assets/images/screen_7.png"/>
+        <div class="w-full pl-5 overflow-visible">
+          <div class="flex w-full mb-5">
+            <div class="relative aspect-square h-28 rounded-lg mr-4">
+              <img
+                alt="App Icon"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+                sizes="100vw"
+                :src="backUrl+appData?.Icon?.data?.attributes?.url || ''"
+              />
+            </div>
+            <div class="flex flex-col items-start">
+              <h1 class="block text-xl font-semibold leading-tight">
+                {{appData.Name}}
+              </h1>
+              <div class="block text-sm text-neutral-500 mt-2 mb-7">
+                <span
+                  class="absolute duration-[1500ms] transition-opacity opacity-0"
+                >
+                  <script>
+                    {
+                      {
+                        appData.DEVELOPER;
+                      }
+                    }
+                  </script>
+                </span>
+                <span
+                  class="absolute duration-[1500ms] transition-opacity opacity-1"
+                >
+                  <script>
+                    {
+                      {
+                        appData.Subname;
+                      }
+                    }
+                  </script>
+                </span>
+              </div>
+              <div class="flex-grow"></div>
+              <div class="flex flex-row items-center mt-2">
+                <button
+                  class="bg-blue-500 text-white px-6 py-1 rounded-full font-bold uppercase"
+                >
+                  GET
+                </button>
+                <span class="ml-2 text-3xs leading-none text-neutral-500"
+                  >In-App<br />Purchases</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full flex flex-row border-t border-neutral-200 py-2.5 overflow-x-auto scrollbar-hide"
+          >
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >178 ratings</span
+              >
+              <img src="assets/images/rating.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+              ></span
+              ><img src="assets/images/stars.svg" class="h-3.5" />
+            </div>
+            <div class="flex items-center px-3">
+              <div class="w-px h-3/5 bg-neutral-300"></div>
+            </div>
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >age</span
+              >
+              <img src="assets/images/age.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+                >Years Old</span
+              >
+            </div>
+            <div class="flex items-center px-3">
+              <div class="w-px h-3/5 bg-neutral-300"></div>
+            </div>
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >category</span
+              >
+              <img src="assets/images/globe.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+                >Education</span
+              >
+            </div>
+            <div class="flex items-center px-3">
+              <div class="w-px h-3/5 bg-neutral-300"></div>
+            </div>
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >developer</span
+              >
+              <img src="assets/images/dev.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+                >Pathfinder DMCC</span
+              >
+            </div>
+            <div class="flex items-center px-3">
+              <div class="w-px h-3/5 bg-neutral-300"></div>
+            </div>
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >language</span
+              >
+              <img src="assets/images/lang.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+                >English</span
+              >
+            </div>
+            <div class="flex items-center px-3">
+              <div class="w-px h-3/5 bg-neutral-300"></div>
+            </div>
+            <div class="flex flex-col items-center min-w-18 shrink-0">
+              <span class="text-1.5xs font-semibold text-neutral-400 uppercase"
+                >size</span
+              >\ <img src="assets/images/size.svg" class="h-8 my-0.5" /><span
+                class="text-1.9xs text-neutral-400"
+                >MB</span
+              >
+            </div>
+          </div>
         </div>
-        <div
-          class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 4 8'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXd2NfLwMju4tvu5OPr6urWw7rNzs7k4+H49fTi6eeqo6nN3+nTp5Dduazf5+rx0bfLhWPlt5r+//9d27TCAAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwUWp3Pz/sWag9sWd+3GGCloj8JYC8eKIZTCwDxbCAO8zSsHRAAAAAElFTkSuQmCC'/%3E%3C/svg%3E&quot;)"
-            src="assets/images/screen_6.png"/>
-        </div>
-        <div
-          class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 4 8'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAP1BMVEX+/v3x9PSJkK/u8e+cnbbN0NjCusHg5eV3fZ88SXh7e425v9lEVZN4gJhTWoz19PXy8fLb2tl3cJDs4MLov6iItGjOAAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhQEAIAzAsCJjw/X/W0kIqo4avdFyHljphqSt8C4QzwRJ6wMTigEJ5XMdFQAAAABJRU5ErkJggg=='/%3E%3C/svg%3E&quot;)"
-            src="assets/images/screen_5.png"/>
-        </div>
+        <div class="w-full my-3.5">
+          <div
+            class="w-full flex snap-mandatory snap-x overflow-x-auto scrollbar-hide"
+          >
+            <div
+              class="h-prv aspect-[207/448] mr-3 ro unded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+                src="assets/images/screen_2.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+                src="assets/images/screen_2.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+                src="assets/images/ft_screen_0.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+                src="assets/images/screen_1.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-repeat: no-repeat;
+                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEWNgamRgJxZQG8ivbS7x9Dn6u1YQ4uId6afl7ZiTpFHM3d4bZa9usPO1dR6ep+LjbFEQoc8OHtuyMJnxsC9xS46AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhwEAIAjAsAoK7vn/ryakGBNYybRaIGNOHxJwl8A8e/FU7wcP5wDzzckuRgAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
+                "
+                src="assets/images/screen_3.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-repeat: no-repeat;
+                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXn19Gw06P+s47e5e/P2t+9vcSzv93r4eD26unu7/Lc4dTRzM7VnWetvb/3n2vqoGfNm5DH1e36/P/+ML/3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwRWV3Pz/sWaIUjLOu9hUI419SCKL5gHeFaiVDxLNAN03mKISAAAAAElFTkSuQmCC\'/%3E%3C/svg%3E');
+                "
+                src="assets/images/screen_7.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-repeat: no-repeat;
+                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAOVBMVEXd2NfLwMju4tvu5OPr6urWw7rNzs7k4+H49fTi6eeqo6nN3+nTp5Dduazf5+rx0bfLhWPlt5r+//9d27TCAAAACXBIWXMAACE4AAAhOAFFljFgAAAAKklEQVR4nAXBCQIAEAgAwUWp3Pz/sWag9sWd+3GGCloj8JYC8eKIZTCwDxbCAO8zSsHRAAAAAElFTkSuQmCC\'/%3E%3C/svg%3E');
+                "
+                src="assets/images/screen_6.png"
+              />
+            </div>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-repeat: no-repeat;
+                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAP1BMVEX+/v3x9PSJkK/u8e+cnbbN0NjCusHg5eV3fZ88SXh7e425v9lEVZN4gJhTWoz19PXy8fLb2tl3cJDs4MLov6iItGjOAAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nAXBhQEAIAzAsCJjw/X/W0kIqo4avdFyHljphqSt8C4QzwRJ6wMTigEJ5XMdFQAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
+                "
+                src="assets/images/screen_5.png"
+              />
+            </div>
 
-        <div
-          class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100">
-          <img
-            alt="screenshot" loading="lazy" decoding="async" data-nimg="fill" class="rounded-3xl"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' viewBox='0 0 4 8'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3Cimage preserveAspectRatio='none' filter='url(%23b)' x='0' y='0' height='100%25' width='100%25' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEX7/Pzj7e3Hn8iotKvi3+7XuZzQv8Dj2Ou7muXS4eO6wbHYyu7BlcnHlL7Ly9S0icfJpOXj7uvFqZnYx8GVOwM3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nBXBhxEAIAgAsbcg2Nv+u3om7JwdVTXSmxl+2SSlexApAXREvgcWTgD1iKzGlgAAAABJRU5ErkJggg=='/%3E%3C/svg%3E&quot;)"
-            src="assets/images/screen_6.png"/>
+            <div
+              class="h-prv aspect-[207/448] mr-3 rounded-3xl border first:ml-4 snap-center relative bg-neutral-100"
+            >
+              <img
+                alt="screenshot"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="rounded-3xl"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  background-repeat: no-repeat;
+                  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http%3A//www.w3.org/2000/svg\' viewBox=\'0 0 4 8\'%3E%3Cfilter id=\'b\' color-interpolation-filters=\'sRGB\'%3E%3CfeGaussianBlur stdDeviation=\'1\'/%3E%3C/filter%3E%3Cimage preserveAspectRatio=\'none\' filter=\'url(%23b)\' x=\'0\' y=\'0\' height=\'100%25\' width=\'100%25\' href=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAMAAADp7a43AAAAPFBMVEX7/Pzj7e3Hn8iotKvi3+7XuZzQv8Dj2Ou7muXS4eO6wbHYyu7BlcnHlL7Ly9S0icfJpOXj7uvFqZnYx8GVOwM3AAAACXBIWXMAACE4AAAhOAFFljFgAAAAK0lEQVR4nBXBhxEAIAgAsbcg2Nv+u3om7JwdVTXSmxl+2SSlexApAXREvgcWTgD1iKzGlgAAAABJRU5ErkJggg==\'/%3E%3C/svg%3E');
+                "
+                src="assets/images/screen_6.png"
+              />
+            </div>
+          </div>
+          <div class="mx-5 pl-3 pt-3 pb-5 flex flex-row items-center border-b">
+            <img class="h-4 mr-2" src="assets/images/iphone.svg" /><span
+              class="text-sm text-gray-500 font-semibold"
+              >iPhone</span
+            >
+          </div>
         </div>
-      </div>
-      <div class="mx-5 pl-3 pt-3 pb-5 flex flex-row items-center border-b">
-        <img class="h-4 mr-2"
-             src="assets/images/iphone.svg"><span
-        class="text-sm text-gray-500 font-semibold">iPhone</span></div>
-    </div>
-    <div class="px-5">
-      <div class="border-b">
-        <div class="block leading-tight relative"><span class="block mb-0.5">No matter if you are tired after work or full of energy on weekend</span><span
-          class="block">We have activities for different goals, interests and context</span><span
-          class="absolute bottom-0 right-0 text-blue-500">more</span></div>
-        <div class="w-full flex flex-row items-center pt-6 pb-10">
-          <div class="leading-tight grow"><span class="block text-blue-500">Pathfinder DMCC</span><span
-            class="block text-gray-500 text-xs">Developer</span></div>
-          <svg class="h-4 mr-2 text-gray-500" viewBox="0 0 216 394" fill="currentColor"
-               xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18.5626 393.011C13.8126 393.011 9.06257 391.198 5.4375 387.573C-1.8125 380.328 -1.8125 368.568 5.4375 361.319L170.251 196.505L5.4375 31.6919C-1.8125 24.4471 -1.8125 12.6866 5.4375 5.43725C12.6875 -1.81208 24.4322 -1.81275 31.6922 5.43725L209.625 183.384C216.875 190.629 216.875 202.389 209.625 209.639L31.6922 387.572C28.0619 391.192 23.3119 393.009 18.5619 393.009L18.5626 393.011Z"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="border-b">
-        <div class="flex flex-row items-center justify-between pt-2 pb-1.5"><h2
-          class="text-1.5xl font-bold">
-          Ratings
-          &amp; Reviews</h2>
-          <button class="text text-blue-500 font-semibold">See All</button>
-        </div>
-        <div class="w-full flex flex-row justify-between mb-4">
-          <div class="flex flex-col items-center"><span
-            class="text-6xl font-extrabold text-neutral-700 font-round">4.7</span><span
-            class="text-sm font-bold text-neutral-500 leading-none">out of 5</span></div>
-          <div class="mt-1.5 text-right grow">
-            <div class="flex flex-row items-center justify-end my-0.5 w-full">
-              <div class="flex flex-row">
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-              </div>
-              <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
-                <div class="h-1 bg-neutral-500 rounded-full" style="width:86%"></div>
-              </div>
+        <div class="px-5">
+          <div class="border-b">
+            <div class="block leading-tight relative">
+              <span class="block mb-0.5"
+                >No matter if you are tired after work or full of energy on
+                weekend</span
+              ><span class="block"
+                >We have activities for different goals, interests and
+                context</span
+              ><span class="absolute bottom-0 right-0 text-blue-500">more</span>
             </div>
-            <div class="flex flex-row items-center justify-end my-0.5 w-full">
-              <div class="flex flex-row">
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
+            <div class="w-full flex flex-row items-center pt-6 pb-10">
+              <div class="leading-tight grow">
+                <span class="block text-blue-500">Pathfinder DMCC</span
+                ><span class="block text-gray-500 text-xs">Developer</span>
               </div>
-              <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
-                <div class="h-1 bg-neutral-500 rounded-full" style="width:7%"></div>
-              </div>
-            </div>
-            <div class="flex flex-row items-center justify-end my-0.5 w-full">
-              <div class="flex flex-row">
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-              </div>
-              <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
-                <div class="h-1 bg-neutral-500 rounded-full" style="width:3%"></div>
-              </div>
-            </div>
-            <div class="flex flex-row items-center justify-end my-0.5 w-full">
-              <div class="flex flex-row">
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-              </div>
-              <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
-                <div class="h-1 bg-neutral-500 rounded-full" style="width:2%"></div>
-              </div>
-            </div>
-            <div class="flex flex-row items-center justify-end my-0.5 w-full">
-              <div class="flex flex-row">
-                <svg class="w-2 h-2 text-neutral-500" fill="currentColor" viewBox="0 0 24 23"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-                </svg>
-              </div>
-              <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
-                <div class="h-1 bg-neutral-500 rounded-full" style="width:3%"></div>
-              </div>
-            </div>
-            <span class="text-neutral-500 text-sm">151 Ratings</span></div>
-        </div>
-        <div class="flex flex-col bg-[#F2F1F6] rounded-lg px-5 py-4 mb-8">
-          <div class="flex flex-row justify-between"><span class="font-semibold">It’s perfect</span><span
-            class="text-neutral-500">24 Dec</span></div>
-          <div class="flex flex-row justify-between items-center mb-3">
-            <div class="flex flex-row">
-              <svg class="h-3 text-orange-500 mr-0.5" fill="currentColor" viewBox="0 0 24 23"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-              </svg>
-              <svg class="h-3 text-orange-500 mr-0.5" fill="currentColor" viewBox="0 0 24 23"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-              </svg>
-              <svg class="h-3 text-orange-500 mr-0.5" fill="currentColor" viewBox="0 0 24 23"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-              </svg>
-              <svg class="h-3 text-orange-500 mr-0.5" fill="currentColor" viewBox="0 0 24 23"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
-              </svg>
-              <svg class="h-3 text-orange-500 mr-0.5" fill="currentColor" viewBox="0 0 24 23"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"></path>
+              <svg
+                class="h-4 mr-2 text-gray-500"
+                viewBox="0 0 216 394"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.5626 393.011C13.8126 393.011 9.06257 391.198 5.4375 387.573C-1.8125 380.328 -1.8125 368.568 5.4375 361.319L170.251 196.505L5.4375 31.6919C-1.8125 24.4471 -1.8125 12.6866 5.4375 5.43725C12.6875 -1.81208 24.4322 -1.81275 31.6922 5.43725L209.625 183.384C216.875 190.629 216.875 202.389 209.625 209.639L31.6922 387.572C28.0619 391.192 23.3119 393.009 18.5619 393.009L18.5626 393.011Z"
+                ></path>
               </svg>
             </div>
-            <span class="text-sm text-neutral-500">Winnpooh009</span></div>
-          <span>it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….</span>
-        </div>
-      </div>
-      <div class="border-b">
-        <div class="flex flex-row items-center justify-between pt-2 pb-1.5"><h2
-          class="text-1.5xl font-bold">App
-          Privacy</h2>
-          <button class="text text-blue-500 font-semibold">See Details</button>
-        </div>
-        <span class="block text-neutral-500 leading-tight mb-6">The developer, <b>Pathfinder DMCC</b>, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the <button
-          class="text-blue-500">developer’s privacy policy</button>.</span>
-        <div class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6">
-          <svg class="w-8 h-8 text-blue-500 self-center mt-2" fill="currentColor" viewBox="0 0 64 64"
-               xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M58.595 42c1.544 0 2.405.866 2.405 2.45v7.29c0 6.153-3.087 9.26-9.322 9.26h-7.244C42.861 61 42 60.134 42 58.61c0-1.554.86-2.42 2.434-2.42h7.185c2.91 0 4.6-1.582 4.6-4.69v-7.05c0-1.584.833-2.45 2.376-2.45zm-53.22 0c1.543 0 2.404.866 2.404 2.45v7.05c0 3.108 1.633 4.69 4.601 4.69h7.186c1.573 0 2.434.866 2.434 2.42 0 1.524-.86 2.39-2.434 2.39h-7.244C6.117 61 3 57.922 3 51.74v-7.29C3 42.866 3.83 42 5.375 42zM32 34C42.897 34 48 42.988 48 46.399c0 .949-.48 1.601-1.501 1.601H17.501C16.481 48 16 47.348 16 46.399 16 42.988 21.103 34 32 34zM32 14c4.438 0 8 3.82 8 8.412 0 4.916-3.562 8.618-8 8.588-4.437-.029-8-3.672-8-8.588C24 17.82 27.563 14 32 14zM51.678 3C57.913 3 61 6.076 61 12.231v7.32C61 21.103 60.168 22 58.595 22c-1.514 0-2.375-.896-2.375-2.45V12.5c0-3.108-1.692-4.691-4.601-4.691h-7.185c-1.573 0-2.434-.866-2.434-2.42C42 3.837 42.86 3 44.434 3h7.244zM19.566 3C21.139 3 22 3.836 22 5.39c0 1.553-.86 2.419-2.434 2.419H12.38c-2.968 0-4.601 1.583-4.601 4.69v7.051c0 1.554-.83 2.45-2.404 2.45C3.86 22 3 21.104 3 19.55v-7.319C3 6.076 6.117 3 12.322 3h7.244z"></path>
-          </svg>
-          <span class="font-bold leading-loose">Data Used to Track You</span><span
-          class="text text-neutral-500 leading-tight">The following data may be used to track you across apps and websites owned by other companies:</span>
-          <div class="mt-2 flex flex-col items-center">
-            <div class="flex flex-row items-center py-1.5">
-              <img class="w-5 h-5 mr-3"
-                   src="assets/images/ids.svg"/>
+          </div>
+          <div class="border-b">
+            <div class="flex flex-row items-center justify-between pt-2 pb-1.5">
+              <h2 class="text-1.5xl font-bold">Ratings &amp; Reviews</h2>
+              <button class="text text-blue-500 font-semibold">See All</button>
+            </div>
+            <div class="w-full flex flex-row justify-between mb-4">
+              <div class="flex flex-col items-center">
+                <span
+                  class="text-6xl font-extrabold text-neutral-700 font-round"
+                  >4.7</span
+                ><span class="text-sm font-bold text-neutral-500 leading-none"
+                  >out of 5</span
+                >
+              </div>
+              <div class="mt-1.5 text-right grow">
+                <div
+                  class="flex flex-row items-center justify-end my-0.5 w-full"
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
+                    <div
+                      class="h-1 bg-neutral-500 rounded-full"
+                      style="width: 86%"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row items-center justify-end my-0.5 w-full"
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
+                    <div
+                      class="h-1 bg-neutral-500 rounded-full"
+                      style="width: 7%"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row items-center justify-end my-0.5 w-full"
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
+                    <div
+                      class="h-1 bg-neutral-500 rounded-full"
+                      style="width: 3%"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row items-center justify-end my-0.5 w-full"
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
+                    <div
+                      class="h-1 bg-neutral-500 rounded-full"
+                      style="width: 2%"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row items-center justify-end my-0.5 w-full"
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      class="w-2 h-2 text-neutral-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="h-1 w-2/3 bg-neutral-300 rounded-full ml-2">
+                    <div
+                      class="h-1 bg-neutral-500 rounded-full"
+                      style="width: 3%"
+                    ></div>
+                  </div>
+                </div>
+                <span class="text-neutral-500 text-sm">151 Ratings</span>
+              </div>
+            </div>
+            <div class="flex flex-col bg-[#F2F1F6] rounded-lg px-5 py-4 mb-8">
+              <div class="flex flex-row justify-between">
+                <span class="font-semibold">It’s perfect</span
+                ><span class="text-neutral-500">24 Dec</span>
+              </div>
+              <div class="flex flex-row justify-between items-center mb-3">
+                <div class="flex flex-row">
+                  <svg
+                    class="h-3 text-orange-500 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 23"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="h-3 text-orange-500 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 23"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="h-3 text-orange-500 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 23"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="h-3 text-orange-500 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 23"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="h-3 text-orange-500 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 23"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-sm text-neutral-500">Winnpooh009</span>
+              </div>
               <span
-                class="text-sm">Identifiers</span>
+                >it’s honestly brings so much joy to my babies and the faces and
+                excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful
+                to do the science projects with my babies…I feel like a teacher.
+                I love the topics that I can discuss with my kids and hear their
+                ideas is amazing….</span
+              >
             </div>
           </div>
-        </div>
-        <div class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6">
-          <svg class="w-8 h-8 text-blue-500 self-center mt-2" fill="currentColor" viewBox="0 0 64 64"
-               xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zm0-4.932c-13.692 0-24.628-10.964-24.628-24.655 0-13.692 10.907-24.656 24.598-24.656 13.691 0 24.656 10.964 24.685 24.656.03 13.69-10.965 24.655-24.656 24.655zm-.03-25.555c4.12.03 7.455-3.48 7.455-8.121 0-4.351-3.336-7.977-7.455-7.977s-7.455 3.626-7.455 7.977c0 4.64 3.336 8.092 7.455 8.121zM18.804 46.687h26.512c1.16 0 1.712-.754 1.712-1.827 0-3.162-4.786-11.4-14.968-11.4-10.181 0-14.967 8.238-14.967 11.4 0 1.073.55 1.827 1.711 1.827z"></path>
-          </svg>
-          <span class="font-bold leading-loose">Data Linked to You</span><span
-          class="text text-neutral-500 leading-tight">The following data may be collected and linked to your identity:</span>
-          <div class="columns-2 mt-2">
-            <div class="flex flex-row items-center py-1.5">
-              <img class="w-5 h-5 mr-3"
-                   src="assets/images/contact.svg"/><span
-              class="text-sm">Contact Info</span></div>
-            <div class="flex flex-row items-center py-1.5">
-              <img class="w-5 h-5 mr-3"
-                   src="assets/images/usage.svg"/><span
-              class="text-sm">Usage Data</span></div>
-            <div class="flex flex-row items-center py-1.5">
-              <img class="w-5 h-5 mr-3"
-                   src="assets/images/ids.svg"/><span
-              class="text-sm">Identifiers</span>
+          <div class="border-b">
+            <div class="flex flex-row items-center justify-between pt-2 pb-1.5">
+              <h2 class="text-1.5xl font-bold">App Privacy</h2>
+              <button class="text text-blue-500 font-semibold">
+                See Details
+              </button>
             </div>
+            <span class="block text-neutral-500 leading-tight mb-6"
+              >The developer, <b>Pathfinder DMCC</b>, indicated that the app’s
+              privacy practices may include handling of data as described below.
+              For more information, see the
+              <button class="text-blue-500">developer’s privacy policy</button
+              >.</span
+            >
+            <div
+              class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-500 self-center mt-2"
+                fill="currentColor"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M58.595 42c1.544 0 2.405.866 2.405 2.45v7.29c0 6.153-3.087 9.26-9.322 9.26h-7.244C42.861 61 42 60.134 42 58.61c0-1.554.86-2.42 2.434-2.42h7.185c2.91 0 4.6-1.582 4.6-4.69v-7.05c0-1.584.833-2.45 2.376-2.45zm-53.22 0c1.543 0 2.404.866 2.404 2.45v7.05c0 3.108 1.633 4.69 4.601 4.69h7.186c1.573 0 2.434.866 2.434 2.42 0 1.524-.86 2.39-2.434 2.39h-7.244C6.117 61 3 57.922 3 51.74v-7.29C3 42.866 3.83 42 5.375 42zM32 34C42.897 34 48 42.988 48 46.399c0 .949-.48 1.601-1.501 1.601H17.501C16.481 48 16 47.348 16 46.399 16 42.988 21.103 34 32 34zM32 14c4.438 0 8 3.82 8 8.412 0 4.916-3.562 8.618-8 8.588-4.437-.029-8-3.672-8-8.588C24 17.82 27.563 14 32 14zM51.678 3C57.913 3 61 6.076 61 12.231v7.32C61 21.103 60.168 22 58.595 22c-1.514 0-2.375-.896-2.375-2.45V12.5c0-3.108-1.692-4.691-4.601-4.691h-7.185c-1.573 0-2.434-.866-2.434-2.42C42 3.837 42.86 3 44.434 3h7.244zM19.566 3C21.139 3 22 3.836 22 5.39c0 1.553-.86 2.419-2.434 2.419H12.38c-2.968 0-4.601 1.583-4.601 4.69v7.051c0 1.554-.83 2.45-2.404 2.45C3.86 22 3 21.104 3 19.55v-7.319C3 6.076 6.117 3 12.322 3h7.244z"
+                ></path>
+              </svg>
+              <span class="font-bold leading-loose">Data Used to Track You</span
+              ><span class="text text-neutral-500 leading-tight"
+                >The following data may be used to track you across apps and
+                websites owned by other companies:</span
+              >
+              <div class="mt-2 flex flex-col items-center">
+                <div class="flex flex-row items-center py-1.5">
+                  <img class="w-5 h-5 mr-3" src="assets/images/ids.svg" />
+                  <span class="text-sm">Identifiers</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-500 self-center mt-2"
+                fill="currentColor"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zm0-4.932c-13.692 0-24.628-10.964-24.628-24.655 0-13.692 10.907-24.656 24.598-24.656 13.691 0 24.656 10.964 24.685 24.656.03 13.69-10.965 24.655-24.656 24.655zm-.03-25.555c4.12.03 7.455-3.48 7.455-8.121 0-4.351-3.336-7.977-7.455-7.977s-7.455 3.626-7.455 7.977c0 4.64 3.336 8.092 7.455 8.121zM18.804 46.687h26.512c1.16 0 1.712-.754 1.712-1.827 0-3.162-4.786-11.4-14.968-11.4-10.181 0-14.967 8.238-14.967 11.4 0 1.073.55 1.827 1.711 1.827z"
+                ></path>
+              </svg>
+              <span class="font-bold leading-loose">Data Linked to You</span
+              ><span class="text text-neutral-500 leading-tight"
+                >The following data may be collected and linked to your
+                identity:</span
+              >
+              <div class="columns-2 mt-2">
+                <div class="flex flex-row items-center py-1.5">
+                  <img
+                    class="w-5 h-5 mr-3"
+                    src="assets/images/contact.svg"
+                  /><span class="text-sm">Contact Info</span>
+                </div>
+                <div class="flex flex-row items-center py-1.5">
+                  <img
+                    class="w-5 h-5 mr-3"
+                    src="assets/images/usage.svg"
+                  /><span class="text-sm">Usage Data</span>
+                </div>
+                <div class="flex flex-row items-center py-1.5">
+                  <img class="w-5 h-5 mr-3" src="assets/images/ids.svg" /><span
+                    class="text-sm"
+                    >Identifiers</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-500 self-center mt-2"
+                fill="currentColor"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.36 17l3.208 3.208A24.23 24.23 0 007.39 32.235c0 13.44 10.93 24.374 24.366 24.374 4.374 0 8.483-1.159 12.035-3.186L47 56.631A28.616 28.616 0 0131.756 61C15.874 61 3 48.122 3 32.235A28.637 28.637 0 017.36 17zM9.77 6.642l47.588 47.606a2.204 2.204 0 010 3.11 2.206 2.206 0 01-3.111 0L6.632 9.753c-.829-.8-.856-2.283 0-3.11.826-.828 2.253-.886 3.138 0zM32.238 3C48.123 3 61 15.878 61 31.761c0 5.597-1.599 10.82-4.364 15.239l-3.208-3.209a24.221 24.221 0 003.182-12.03c0-13.437-10.934-24.37-24.372-24.37a24.223 24.223 0 00-12.03 3.18L17 7.363A28.628 28.628 0 0132.238 3zm-7.492 31L36 45H18.373C17.44 45 17 44.418 17 43.572c0-2.224 2.5-7.11 7.746-9.572zm6.915-20C35.733 14 39 17.634 39 22.002c0 2.419-.874 4.529-2.281 5.998L26 16.923C27.343 15.145 29.376 14 31.661 14z"
+                ></path>
+              </svg>
+              <span class="font-bold leading-loose">Data Not Linked to You</span
+              ><span class="text text-neutral-500 leading-tight"
+                >The following data may be collected but it is not linked to
+                your identity:</span
+              >
+              <div class="mt-2 flex flex-col items-center">
+                <div class="flex flex-row items-center py-1.5">
+                  <img class="w-5 h-5 mr-3" src="assets/images/diag.svg" /><span
+                    class="text-sm"
+                    >Diagnostics</span
+                  >
+                </div>
+              </div>
+            </div>
+            <span class="block text-neutral-500 leading-tight mt-10 mb-6"
+              >Privacy practices may very based, for example, on the features
+              you use or your age
+              <button class="text-blue-500">Learn More</button></span
+            >
+          </div>
+          <div class="flex flex-col">
+            <div class="flex flex-row items-center justify-between pt-2 pb-1.5">
+              <h2 class="text-1.5xl font-bold">Information</h2>
+              <button class="text text-blue-500 font-semibold"></button>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Provider</span
+              ><span class="text-sm">PATHFINDER DMCC</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Size</span
+              ><span class="text-sm">80.6 MB</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Category</span
+              ><span class="text-sm">Education</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Compatability</span
+              ><span class="text-sm">Works on this iPhone</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Languages</span
+              ><span class="text-sm">English</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Age Rating</span
+              ><span class="text-sm">4+</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">In-App Purchases</span
+              ><span class="text-sm">Yes</span>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between py-3 border-b"
+            >
+              <span class="text-sm text-neutral-500">Copyright</span
+              ><span class="text-sm">© 2022, PATHFINDER DMCC</span>
+            </div>
+            <button class="flex flex-row items-center justify-between py-3">
+              <span class="text-sm text-blue-500">Privacy Policy</span>
+            </button>
           </div>
         </div>
-        <div class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6">
-          <svg class="w-8 h-8 text-blue-500 self-center mt-2" fill="currentColor" viewBox="0 0 64 64"
-               xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7.36 17l3.208 3.208A24.23 24.23 0 007.39 32.235c0 13.44 10.93 24.374 24.366 24.374 4.374 0 8.483-1.159 12.035-3.186L47 56.631A28.616 28.616 0 0131.756 61C15.874 61 3 48.122 3 32.235A28.637 28.637 0 017.36 17zM9.77 6.642l47.588 47.606a2.204 2.204 0 010 3.11 2.206 2.206 0 01-3.111 0L6.632 9.753c-.829-.8-.856-2.283 0-3.11.826-.828 2.253-.886 3.138 0zM32.238 3C48.123 3 61 15.878 61 31.761c0 5.597-1.599 10.82-4.364 15.239l-3.208-3.209a24.221 24.221 0 003.182-12.03c0-13.437-10.934-24.37-24.372-24.37a24.223 24.223 0 00-12.03 3.18L17 7.363A28.628 28.628 0 0132.238 3zm-7.492 31L36 45H18.373C17.44 45 17 44.418 17 43.572c0-2.224 2.5-7.11 7.746-9.572zm6.915-20C35.733 14 39 17.634 39 22.002c0 2.419-.874 4.529-2.281 5.998L26 16.923C27.343 15.145 29.376 14 31.661 14z"></path>
-          </svg>
-          <span class="font-bold leading-loose">Data Not Linked to You</span><span
-          class="text text-neutral-500 leading-tight">The following data may be collected but it is not linked to your identity:</span>
-          <div class="mt-2 flex flex-col items-center">
-            <div class="flex flex-row items-center py-1.5">
-              <img class="w-5 h-5 mr-3"
-                   src="assets/images/diag.svg"/><span
-              class="text-sm">Diagnostics</span></div>
-          </div>
-        </div>
-        <span class="block text-neutral-500 leading-tight mt-10 mb-6">Privacy practices may very based, for example, on the features you use or your age <button
-          class="text-blue-500">Learn More</button></span></div>
-      <div class="flex flex-col">
-        <div class="flex flex-row items-center justify-between pt-2 pb-1.5"><h2
-          class="text-1.5xl font-bold">
-          Information</h2>
-          <button class="text text-blue-500 font-semibold"></button>
-        </div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Provider</span><span
-          class="text-sm">PATHFINDER DMCC</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Size</span><span
-          class="text-sm">80.6 MB</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Category</span><span
-          class="text-sm">Education</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Compatability</span><span
-          class="text-sm">Works on this iPhone</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Languages</span><span
-          class="text-sm">English</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Age Rating</span><span
-          class="text-sm">4+</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">In-App Purchases</span><span
-          class="text-sm">Yes</span></div>
-        <div class="flex flex-row items-center justify-between py-3 border-b"><span
-          class="text-sm text-neutral-500">Copyright</span><span
-          class="text-sm">© 2022, PATHFINDER DMCC</span></div>
-        <button class="flex flex-row items-center justify-between py-3"><span
-          class="text-sm text-blue-500">Privacy Policy</span>
-        </button>
       </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 
+  <script>
+    const { createApp, ref } = Vue;
+
+    createApp({
+      setup() {
+        const appData = {
+          Name: "Hearty",
+          Subname: "Fun Ideas for Parents",
+          url: "https://www.facebook.com/",
+          RATINGS: "178",
+          Rating: "4.7",
+          Age: "4+",
+          CATEGORY: "Education",
+          DEVELOPER: "Pathfinder",
+          LANGUAGE: "English",
+          SIZE: "77.6 Mb",
+          Description:
+            "No matter if you are tired after work or full of energy on weekend We have activities for different goals, interests and context",
+          Privacy: [
+            {
+              type: "paragraph",
+              children: [
+                {
+                  type: "text",
+                  text: "The developer, Pathfinder DMCC, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the developer’s privacy policy.",
+                },
+              ],
+            },
+            {
+              type: "paragraph",
+              children: [
+                {
+                  type: "text",
+                  text: "",
+                },
+              ],
+            },
+          ],
+          Compatability: "Works on this iPhone",
+          InAppPurchases: true,
+          Copyright: "© 2022, PATHFINDER DMCC",
+          Icon: {
+            data: {
+              id: 1,
+              attributes: {
+                url: "/uploads/logo_round_4865dbb300.png",
+              },
+            },
+          },
+          Images: {
+            data: [
+              {
+                id: 2,
+                attributes: {
+                  name: "screen_1.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 1080,
+                  height: 2337,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_1.png",
+                      hash: "thumbnail_screen_1_ae135475bb",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 12.28,
+                      url: "/uploads/thumbnail_screen_1_ae135475bb.png",
+                    },
+                    medium: {
+                      name: "medium_screen_1.png",
+                      hash: "medium_screen_1_ae135475bb",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 114,
+                      url: "/uploads/medium_screen_1_ae135475bb.png",
+                    },
+                    small: {
+                      name: "small_screen_1.png",
+                      hash: "small_screen_1_ae135475bb",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 66.04,
+                      url: "/uploads/small_screen_1_ae135475bb.png",
+                    },
+                    large: {
+                      name: "large_screen_1.png",
+                      hash: "large_screen_1_ae135475bb",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 168.75,
+                      url: "/uploads/large_screen_1_ae135475bb.png",
+                    },
+                  },
+                  hash: "screen_1_ae135475bb",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 138.52,
+                  url: "/uploads/screen_1_ae135475bb.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.018Z",
+                  updatedAt: "2024-02-04T10:46:34.018Z",
+                },
+              },
+              {
+                id: 3,
+                attributes: {
+                  name: "screen_4.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 1080,
+                  height: 2337,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_4.png",
+                      hash: "thumbnail_screen_4_b7d5731101",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 13.75,
+                      url: "/uploads/thumbnail_screen_4_b7d5731101.png",
+                    },
+                    medium: {
+                      name: "medium_screen_4.png",
+                      hash: "medium_screen_4_b7d5731101",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 127.15,
+                      url: "/uploads/medium_screen_4_b7d5731101.png",
+                    },
+                    small: {
+                      name: "small_screen_4.png",
+                      hash: "small_screen_4_b7d5731101",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 74.68,
+                      url: "/uploads/small_screen_4_b7d5731101.png",
+                    },
+                    large: {
+                      name: "large_screen_4.png",
+                      hash: "large_screen_4_b7d5731101",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 186.19,
+                      url: "/uploads/large_screen_4_b7d5731101.png",
+                    },
+                  },
+                  hash: "screen_4_b7d5731101",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 143,
+                  url: "/uploads/screen_4_b7d5731101.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.193Z",
+                  updatedAt: "2024-02-04T10:46:34.193Z",
+                },
+              },
+              {
+                id: 4,
+                attributes: {
+                  name: "screen_6.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 828,
+                  height: 1792,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_6.png",
+                      hash: "thumbnail_screen_6_c9a5c112b4",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 17.91,
+                      url: "/uploads/thumbnail_screen_6_c9a5c112b4.png",
+                    },
+                    small: {
+                      name: "small_screen_6.png",
+                      hash: "small_screen_6_c9a5c112b4",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 111.87,
+                      url: "/uploads/small_screen_6_c9a5c112b4.png",
+                    },
+                    medium: {
+                      name: "medium_screen_6.png",
+                      hash: "medium_screen_6_c9a5c112b4",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 199.25,
+                      url: "/uploads/medium_screen_6_c9a5c112b4.png",
+                    },
+                    large: {
+                      name: "large_screen_6.png",
+                      hash: "large_screen_6_c9a5c112b4",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 303.56,
+                      url: "/uploads/large_screen_6_c9a5c112b4.png",
+                    },
+                  },
+                  hash: "screen_6_c9a5c112b4",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 195.65,
+                  url: "/uploads/screen_6_c9a5c112b4.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.195Z",
+                  updatedAt: "2024-02-04T10:46:34.195Z",
+                },
+              },
+              {
+                id: 5,
+                attributes: {
+                  name: "screen_3.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 828,
+                  height: 1792,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_3.png",
+                      hash: "thumbnail_screen_3_ce4cf59dbc",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 16.13,
+                      url: "/uploads/thumbnail_screen_3_ce4cf59dbc.png",
+                    },
+                    small: {
+                      name: "small_screen_3.png",
+                      hash: "small_screen_3_ce4cf59dbc",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 112.52,
+                      url: "/uploads/small_screen_3_ce4cf59dbc.png",
+                    },
+                    medium: {
+                      name: "medium_screen_3.png",
+                      hash: "medium_screen_3_ce4cf59dbc",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 226.69,
+                      url: "/uploads/medium_screen_3_ce4cf59dbc.png",
+                    },
+                    large: {
+                      name: "large_screen_3.png",
+                      hash: "large_screen_3_ce4cf59dbc",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 377.12,
+                      url: "/uploads/large_screen_3_ce4cf59dbc.png",
+                    },
+                  },
+                  hash: "screen_3_ce4cf59dbc",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 286.75,
+                  url: "/uploads/screen_3_ce4cf59dbc.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.411Z",
+                  updatedAt: "2024-02-04T10:46:34.411Z",
+                },
+              },
+              {
+                id: 6,
+                attributes: {
+                  name: "screen_2.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 640,
+                  height: 1385,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_2.png",
+                      hash: "thumbnail_screen_2_eebe5bf436",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 19.08,
+                      url: "/uploads/thumbnail_screen_2_eebe5bf436.png",
+                    },
+                    small: {
+                      name: "small_screen_2.png",
+                      hash: "small_screen_2_eebe5bf436",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 142.17,
+                      url: "/uploads/small_screen_2_eebe5bf436.png",
+                    },
+                    medium: {
+                      name: "medium_screen_2.png",
+                      hash: "medium_screen_2_eebe5bf436",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 286.87,
+                      url: "/uploads/medium_screen_2_eebe5bf436.png",
+                    },
+                    large: {
+                      name: "large_screen_2.png",
+                      hash: "large_screen_2_eebe5bf436",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 470.6,
+                      url: "/uploads/large_screen_2_eebe5bf436.png",
+                    },
+                  },
+                  hash: "screen_2_eebe5bf436",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 162.65,
+                  url: "/uploads/screen_2_eebe5bf436.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.434Z",
+                  updatedAt: "2024-02-04T10:46:34.434Z",
+                },
+              },
+              {
+                id: 7,
+                attributes: {
+                  name: "screen_7.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 828,
+                  height: 1792,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_7.png",
+                      hash: "thumbnail_screen_7_ae59c40d24",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 16.84,
+                      url: "/uploads/thumbnail_screen_7_ae59c40d24.png",
+                    },
+                    small: {
+                      name: "small_screen_7.png",
+                      hash: "small_screen_7_ae59c40d24",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 91.97,
+                      url: "/uploads/small_screen_7_ae59c40d24.png",
+                    },
+                    medium: {
+                      name: "medium_screen_7.png",
+                      hash: "medium_screen_7_ae59c40d24",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 158.95,
+                      url: "/uploads/medium_screen_7_ae59c40d24.png",
+                    },
+                    large: {
+                      name: "large_screen_7.png",
+                      hash: "large_screen_7_ae59c40d24",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 239.85,
+                      url: "/uploads/large_screen_7_ae59c40d24.png",
+                    },
+                  },
+                  hash: "screen_7_ae59c40d24",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 122.11,
+                  url: "/uploads/screen_7_ae59c40d24.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.455Z",
+                  updatedAt: "2024-02-04T10:46:34.455Z",
+                },
+              },
+              {
+                id: 8,
+                attributes: {
+                  name: "screen_5.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 1242,
+                  height: 2688,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_screen_5.png",
+                      hash: "thumbnail_screen_5_f981578486",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 17.72,
+                      url: "/uploads/thumbnail_screen_5_f981578486.png",
+                    },
+                    small: {
+                      name: "small_screen_5.png",
+                      hash: "small_screen_5_f981578486",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 99.93,
+                      url: "/uploads/small_screen_5_f981578486.png",
+                    },
+                    medium: {
+                      name: "medium_screen_5.png",
+                      hash: "medium_screen_5_f981578486",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 179.57,
+                      url: "/uploads/medium_screen_5_f981578486.png",
+                    },
+                    large: {
+                      name: "large_screen_5.png",
+                      hash: "large_screen_5_f981578486",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 272.49,
+                      url: "/uploads/large_screen_5_f981578486.png",
+                    },
+                  },
+                  hash: "screen_5_f981578486",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 275.81,
+                  url: "/uploads/screen_5_f981578486.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.609Z",
+                  updatedAt: "2024-02-04T10:46:34.609Z",
+                },
+              },
+              {
+                id: 9,
+                attributes: {
+                  name: "ft_screen_0.png",
+                  alternativeText: null,
+                  caption: null,
+                  width: 640,
+                  height: 1385,
+                  formats: {
+                    thumbnail: {
+                      name: "thumbnail_ft_screen_0.png",
+                      hash: "thumbnail_ft_screen_0_222081cc62",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 72,
+                      height: 156,
+                      size: 18.57,
+                      url: "/uploads/thumbnail_ft_screen_0_222081cc62.png",
+                    },
+                    small: {
+                      name: "small_ft_screen_0.png",
+                      hash: "small_ft_screen_0_222081cc62",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 231,
+                      height: 500,
+                      size: 122.51,
+                      url: "/uploads/small_ft_screen_0_222081cc62.png",
+                    },
+                    medium: {
+                      name: "medium_ft_screen_0.png",
+                      hash: "medium_ft_screen_0_222081cc62",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 347,
+                      height: 750,
+                      size: 238.97,
+                      url: "/uploads/medium_ft_screen_0_222081cc62.png",
+                    },
+                    large: {
+                      name: "large_ft_screen_0.png",
+                      hash: "large_ft_screen_0_222081cc62",
+                      ext: ".png",
+                      mime: "image/png",
+                      path: null,
+                      width: 462,
+                      height: 1000,
+                      size: 385.73,
+                      url: "/uploads/large_ft_screen_0_222081cc62.png",
+                    },
+                  },
+                  hash: "ft_screen_0_222081cc62",
+                  ext: ".png",
+                  mime: "image/png",
+                  size: 161.14,
+                  url: "/uploads/ft_screen_0_222081cc62.png",
+                  previewUrl: null,
+                  provider: "local",
+                  provider_metadata: null,
+                  createdAt: "2024-02-04T10:46:34.653Z",
+                  updatedAt: "2024-02-04T10:46:34.653Z",
+                },
+              },
+            ],
+          },
+          Review: {
+            id: 1,
+            Title: "It’s perfect",
+            Review:
+              "it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….",
+            Rating: 5,
+            Date: "2024-02-14",
+            User: "Winnpooh009",
+          },
+        };
+
+        return {
+          backUrl: "https://appstore-production.up.railway.app",
+          appData,
+        };
+      },
+    }).mount("#app");
+
+    fetch("https://appstore-production.up.railway.app/api/app?populate=*").then(
+      (data) => {
+        data.json().then(({ data }) => {
+          const { attributes } = data || {};
+          console.warn("attributes", attributes);
+        });
+      }
+    );
+  </script>
 </html>
