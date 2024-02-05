@@ -1259,79 +1259,36 @@
                 >
               </div>
             </div>
-            <div class="flex flex-col bg-[#F2F1F6] rounded-lg px-5 py-4 mb-8">
-              <div class="flex flex-row justify-between">
-                <span class="font-semibold">{{}}</span
-                ><span class="text-neutral-500">24 Dec</span>
-              </div>
-              <div class="flex flex-row justify-between items-center mb-3">
-                <div class="flex flex-row">
-                  <svg
-                    class="h-3 text-orange-500 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 23"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="h-3 text-orange-500 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 23"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="h-3 text-orange-500 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 23"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="h-3 text-orange-500 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 23"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="h-3 text-orange-500 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 23"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
-                    ></path>
-                  </svg>
-                </div>
-                <span class="text-sm text-neutral-500">Winnpooh009</span>
-              </div>
-              <span
-                >it’s honestly brings so much joy to my babies and the faces and
-                excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful
-                to do the science projects with my babies…I feel like a teacher.
-                I love the topics that I can discuss with my kids and hear their
-                ideas is amazing….</span
+            <template v-for="review in appData.review">
+              <div
+                v-if="review.title"
+                class="flex flex-col bg-[#F2F1F6] rounded-lg px-5 py-4 mb-8"
               >
-            </div>
+                <div class="flex flex-row justify-between">
+                  <span class="font-semibold">{{review.title}}</span
+                  ><span class="text-neutral-500">{{review.date}}</span>
+                </div>
+                <div class="flex flex-row justify-between items-center mb-3">
+                  <div class="flex flex-row">
+                    <svg
+                      v-for="index in review.rating"
+                      :key="index"
+                      class="h-3 text-orange-500 mr-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 24 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.5 0L8 9H0L6.63 13.88L4.01 23L11.51 17L19.01 23L16.38 13.87L23.01 9H15.01L11.51 0H11.5Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm text-neutral-500">{{review.user}}</span>
+                </div>
+                <span>{{review.review}}</span>
+              </div>
+            </template>
           </div>
           <div class="border-b">
             <div class="flex flex-row items-center justify-between pt-2 pb-1.5">
@@ -1340,13 +1297,13 @@
                 See Details
               </button>
             </div>
-            <span class="block text-neutral-500 leading-tight mb-6"
-              >The developer, <b>Pathfinder DMCC</b>, indicated that the app’s
-              privacy practices may include handling of data as described below.
-              For more information, see the
-              <button class="text-blue-500">developer’s privacy policy</button
-              >.</span
-            >
+            <span class="block text-neutral-500 leading-tight mb-6">
+              <p v-for="paragraph in appData.privacy">
+                <template v-for="text in paragraph.children">
+                  {{ text.text }}
+                </template>
+              </p>
+            </span>
             <div
               class="w-full px-5 py-4 rounded-2xl drop-shadow-lg bg-white flex flex-col text-center mb-6"
             >
@@ -1453,49 +1410,50 @@
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Provider</span
-              ><span class="text-sm">PATHFINDER DMCC</span>
+              ><span class="text-sm">{{appData.developer}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Size</span
-              ><span class="text-sm">80.6 MB</span>
+              ><span class="text-sm">{{appData.size}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Category</span
-              ><span class="text-sm">Education</span>
+              ><span class="text-sm">{{appData.category}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Compatability</span
-              ><span class="text-sm">Works on this iPhone</span>
+              ><span class="text-sm">{{appData.compatability}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Languages</span
-              ><span class="text-sm">English</span>
+              ><span class="text-sm">{{appData.language}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Age Rating</span
-              ><span class="text-sm">4+</span>
+              ><span class="text-sm">{{appData.rating}}</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
-              <span class="text-sm text-neutral-500">In-App Purchases</span
-              ><span class="text-sm">Yes</span>
+              <span class="text-sm text-neutral-500">In-App Purchases</span>
+              <span class="text-sm" v-if="appData.inapppurchases">Yes</span>
+              <span class="text-sm" v-else>No</span>
             </div>
             <div
               class="flex flex-row items-center justify-between py-3 border-b"
             >
               <span class="text-sm text-neutral-500">Copyright</span
-              ><span class="text-sm">© 2022, PATHFINDER DMCC</span>
+              ><span class="text-sm">{{appData.copyright}}</span>
             </div>
             <button class="flex flex-row items-center justify-between py-3">
               <span class="text-sm text-blue-500">Privacy Policy</span>
@@ -1605,15 +1563,17 @@
           },
         ],
       },
-      review: {
-        id: 1,
-        title: "It’s perfect",
-        teview:
-          "it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….",
-        rating: 5,
-        date: "2024-02-14",
-        user: "Winnpooh009",
-      },
+      review: [
+        {
+          id: 2,
+          title: "It’s perfect",
+          review:
+            "it’s honestly brings so much joy to my babies and the faces and excitement is a beautiful blessing🥰🥰🥰🥰 I’m beyond grateful to do the science projects with my babies…I feel like a teacher. I love the topics that I can discuss with my kids and hear their ideas is amazing….",
+          rating: 5,
+          date: "2024-01-11",
+          user: "Winnpooh009",
+        },
+      ],
     });
 
     createApp({
